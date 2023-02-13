@@ -1,0 +1,14 @@
+function computeDepth (x){
+  let set = new Set();
+  let sum = 0;
+  let depth = 0;
+  
+  while (set.size < 10) {
+    sum += x;
+    sum.toString().split('').forEach((num) => {
+      set.add(num);
+    })
+    depth++;
+  }
+  return depth;
+}
